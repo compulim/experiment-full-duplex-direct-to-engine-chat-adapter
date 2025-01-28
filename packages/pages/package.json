@@ -11,7 +11,7 @@
     "precommit": "npm run precommit:eslint && npm run precommit:typescript",
     "precommit:eslint": "ESLINT_USE_FLAT_CONFIG=false eslint --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts ./src/",
     "precommit:typescript": "tsc --project ./src/tsconfig.json",
-    "start": "npm run build -- --define:IS_PRODUCTION=false --onSuccess=\"touch ../pages/src/index.tsx\" --servedir=./public",
+    "start": "npm run build -- --define:IS_PRODUCTION=false --servedir=./public",
     "switch": "cat package.json | jq --arg SWITCH_NAME $SWITCH_NAME -r '(.[\"switch:\" + $SWITCH_NAME] // {}) as $TEMPLATE | .devDependencies += ($TEMPLATE.devDependencies // {}) | .dependencies += ($TEMPLATE.dependencies // {})' | tee ./package.json.tmp && mv ./package.json.tmp ./package.json"
   },
   "author": "William Wong (https://github.com/compulim)",
