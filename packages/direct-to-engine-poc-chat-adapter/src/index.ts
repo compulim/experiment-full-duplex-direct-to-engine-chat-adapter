@@ -1,3 +1,4 @@
-import FullDuplexChatAdapter from "./FullDuplexChatAdapter";
+import FullDuplexChatAdapterForDevelopmentOnly from './FullDuplexChatAdapterForDevelopmentOnly';
+import { TestCanvasBotWithSubscribeStrategy, toDirectLineJSWithSubscribe } from './fullDuplex/toDirectLineJS';
 
-export { FullDuplexChatAdapter };
+export { FullDuplexChatAdapterForDevelopmentOnly, TestCanvasBotWithSubscribeStrategy, toDirectLineJSWithSubscribe };

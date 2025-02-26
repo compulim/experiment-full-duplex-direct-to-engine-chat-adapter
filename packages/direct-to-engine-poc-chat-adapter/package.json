@@ -110,7 +110,9 @@
     "react": ">=16.9.0"
   },
   "dependencies": {
+    "copilot-studio-direct-to-engine-chat-adapter": "^0.0.0-main.20241022-173702.3e37c28",
     "core-js-pure": "^3.40.0",
+    "eventsource-parser": "^3.0.0",
     "iter-fest": "^0.2.1",
     "valibot": "^1.0.0-beta.14"
   }

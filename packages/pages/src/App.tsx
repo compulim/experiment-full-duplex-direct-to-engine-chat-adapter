@@ -1,9 +1,16 @@
 import { ReactWebChat } from 'botframework-webchat';
-import { FullDuplexChatAdapter } from 'direct-to-engine-poc-chat-adapter';
+import { FullDuplexChatAdapterForDevelopmentOnly } from 'direct-to-engine-poc-chat-adapter';
 import React, { Fragment, useMemo } from 'react';
 
 const App = () => {
-  const directLine = useMemo(() => new FullDuplexChatAdapter('http://localhost:8001/subscribe').toDirectLineJS(), []);
+  const directLine = useMemo(
+    () =>
+      new FullDuplexChatAdapterForDevelopmentOnly('https://.../environments/.../bots/.../test/conversations', {
+        DO_NOT_USE_THIS_FOR_PRODUCTION: true,
+        token: 'eyJ...'
+      }).toDirectLineJS(),
+    []
+  );
 
   return (
     <Fragment>
